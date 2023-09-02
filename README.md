@@ -1,4 +1,5 @@
 # AnimalGAN_improved
+This is an improved version, the original code is in the repository AnimalGAN_backup https://github.com/XC-NCTR/AnimalGAN_backup
 # AnimalGAN: A Generative Adversarial Network Model Alternative to Animal Studies for Clinical Pathology Assessment
 This repository provides the source codes for our paper **AnimalGAN: A Generative Adversarial Network Model Alternative to Animal Studies for Clinical Pathology Assessment**.
 
