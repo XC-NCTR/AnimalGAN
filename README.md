@@ -2,8 +2,7 @@
 This repository provides the source codes for our paper **AnimalGAN: A Generative Adversarial Network Model Alternative to Animal Studies for Clinical Pathology Assessment**.
 
 ## Requirements
-The code was tested with the packages listed in `environment.yml`. We assume that the installation of the above-mentioned packages covers all dependencies. In case we have missed essential dependencies please raise an issue. To allow you to reproduce our results easily, we also provide a Dockerfile that contains a working environment containing all the dependencies.
-We provided an instruction on how to setup the required environment in the `Demo.mht`.
+The code was tested with the packages listed in `environment.yml`. We assume that the installation of the above-mentioned packages covers all dependencies. In case we have missed essential dependencies please raise an issue. To allow you to reproduce our results easily, we provided an instruction on how to setup the required environment and run the code in the `Demo.md`.
 
 ## Usage
 The `main.py` is used to start (or resume) training, and generate clinical pathology measurements using a trained model.
