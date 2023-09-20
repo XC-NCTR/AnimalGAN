@@ -18,9 +18,12 @@ def parse_opt():
                         help="dimension of Hematology and Biochemistry measurements")
     parser.add_argument("--n_critic", type=int, default=5, help="number of critic iterations per generator iteration")
     parser.add_argument("--interval", type=int, default=500, help="number of intervals you want to save models")
+    parser.add_argument("--lambda_gp", type=float, default=1.0, help="strength of the gradient penalty regularization term")
     parser.add_argument("--model_path", type=str, default='./models', help="path to model saving folder")
 
-    parser.add_argument("--num_generate", type=int, help="number of blood testing records you want to generate")
+    parser.add_argument("--filename_Losses", type=str, default='Loss.txt', help="filename of losses")
+
+    parser.add_argument("--num_generate", type=int, default=100, help="number of blood testing records you want to generate")
     opt = parser.parse_args()
 
     return opt
