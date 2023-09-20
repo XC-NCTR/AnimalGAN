@@ -43,6 +43,8 @@ def train(generator, discriminator, dataloader, n_epochs, n_critic, Z_dim, devic
             optimizer_D.zero_grad()
             # Sample noise
             z = torch.randn(batch_size, Z_dim).to(device)
+            z = (z - z.min()) / (z.max() - z.min())
+            z = 2 * z - 1
             gen_Measurement = generator(z, Stru, Time, Dose)
             validity_real = discriminator(Measurement, Stru, Time, Dose)
             validity_fake = discriminator(gen_Measurement.detach(), Stru, Time, Dose)
