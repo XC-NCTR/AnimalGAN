@@ -121,8 +121,7 @@ if __name__ == '__main__':
     from model import Generator, Discriminator
     import torch
 
-    #wd = r'/path/to/your/project'
-    wd = r'/home/xchen/workspace/AnimalGAN'
+    wd = r'/path/to/your/project'
     os.chdir(wd)
     opt = parse_opt()
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
