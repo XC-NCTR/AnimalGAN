@@ -3,6 +3,10 @@ import argparse
 
 def parse_opt():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--data_path", type=str, default='./Data/Example_Data_training.tsv',
+                        help="path to file that stores all the training data")
+    parser.add_argument("--descriptors_path", type=str, default='./Data/Example_MolecularDescriptors.tsv',
+                        help="path to the molecular descriptor file")
     parser.add_argument("--n_epochs", type=int, default=100000, help="number of epochs of training")
     parser.add_argument("--batch_size", type=int, default=128, help="size of the batches")
     parser.add_argument("--lr", type=float, default=1e-7, help="adam: learning rate")
@@ -18,12 +22,14 @@ def parse_opt():
                         help="dimension of Hematology and Biochemistry measurements")
     parser.add_argument("--n_critic", type=int, default=5, help="number of critic iterations per generator iteration")
     parser.add_argument("--interval", type=int, default=500, help="number of intervals you want to save models")
-    parser.add_argument("--lambda_gp", type=float, default=1.0, help="strength of the gradient penalty regularization term")
+    parser.add_argument("--lambda_gp", type=float, default=1.0,
+                        help="strength of the gradient penalty regularization term")
+    parser.add_argument("--lambda_GR", type=float, default=0.2,
+                        help="strength of the regularization term for generator")
     parser.add_argument("--model_path", type=str, default='./models', help="path to model saving folder")
-
     parser.add_argument("--filename_Losses", type=str, default='Loss.txt', help="filename of losses")
-
-    parser.add_argument("--num_generate", type=int, default=100, help="number of blood testing records you want to generate")
+    parser.add_argument("--num_generate", type=int, default=100,
+                        help="number of blood testing records you want to generate")
     opt = parser.parse_args()
 
     return opt
