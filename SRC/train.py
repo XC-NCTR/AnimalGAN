@@ -135,4 +135,4 @@ if __name__ == '__main__':
 
     # Training WGAN-GP with generator regularization
     train(generator, discriminator, dataloader, opt.n_epochs, opt.n_critic, opt.Z_dim, device, opt.lr, opt.b1, opt.b2,
-          opt.interval, opt.model_path, opt.lambda_gp, lambda_GR=0.02)
+          opt.interval, opt.model_path, opt.lambda_gp, opt.lambda_GR)
