@@ -42,7 +42,7 @@ def generate(treatments, descriptors, training_data, descriptors_training, resul
             check = np.sum(generated_records[:, 9:14])
             if 95 < check < 105:
                 num += 1
-                Results.loc[i] = generated_records
+                Results.loc[i] = generated_records.flatten()
     Results = pd.concat([treatments.loc[treatments.index.repeat(opt.num_generate)].reset_index(drop=True), Results], axis=1)
     Results.to_csv(result_path, sep='\t', index=False)
 
